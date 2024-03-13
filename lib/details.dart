@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/salat.dart'; // Assuming the Salat class is defined in salat.dart
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 class details extends StatelessWidget {
   late salat salatItem;
@@ -8,6 +9,7 @@ class details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text(salatItem.salatName),
@@ -16,6 +18,7 @@ class details extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Image.asset(salatItem.ImagePath ),
             Text(
               'Salat Name: ${salatItem.salatName}',
               style: TextStyle(fontSize: 20),
