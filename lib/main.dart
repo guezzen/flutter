@@ -9,7 +9,7 @@ void main() {
   runApp(
       MaterialApp(
         title: "GUIZZOU",
-        home: tp2(),
+        home: home(),
       )
 
 

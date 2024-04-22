@@ -34,12 +34,13 @@ class homePage extends State<homeState> with WidgetsBindingObserver {
     super.initState();
     WidgetsBinding.instance?.addObserver(this);
     assetsAudioPlayer = AssetsAudioPlayer.newPlayer();
-    assetsAudioPlayer.open(Audio("assets/maher.mp3"), autoStart: true);
+    assetsAudioPlayer.open(Audio("assets/maher.mp3"));
   }
 
   @override
   void dispose() {
     WidgetsBinding.instance?.removeObserver(this);
+    assetsAudioPlayer.dispose();
     super.dispose();
   }
 
